@@ -14,7 +14,7 @@
 		"name": "Rasmus Ljungmann Pedersen",
 		"email": "rasmuslp@gmail.com"
 	},
-	"license": "UNLICENSED",
+	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/rasmuslp/eslint-config-rasmuslp/issues"
 	},
