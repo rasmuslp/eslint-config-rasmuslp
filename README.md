@@ -1,4 +1,4 @@
-# eslint-config-rasmuslp
+# @rasmuslp/eslint-config
 
 [![CircleCI](https://circleci.com/gh/rasmuslp/eslint-config-rasmuslp.svg?style=shield)](https://circleci.com/gh/rasmuslp/eslint-config-rasmuslp)
 
@@ -16,7 +16,7 @@ $ npm install --save-dev eslint
 
 Install this module, and the following dependencies:
 ```bash
-$ npm install --save-dev https://github.com/rasmuslp/eslint-config-rasmuslp
+$ npm install --save-dev @rasmuslp/eslint-config
 $ npm install --save-dev eslint-config-standard eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node
 ```
 
@@ -24,6 +24,6 @@ Configure eslint in your project by extending this configuration in your local `
 ```json
 {
     "root": true,
-    "extends": "rasmuslp"
+    "extends": "@rasmuslp"
 }
 ```
