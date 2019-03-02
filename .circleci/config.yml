@@ -9,39 +9,32 @@ commands:
     - run:
         command: npm run lint
 
-defaults: &defaults
-  working_directory: ~/repo
-
 jobs:
   test-v8:
-    <<: *defaults
     docker:
       - image: node:8
     steps:
       - run-all
 
   test-v10:
-    <<: *defaults
     docker:
       - image: node:10
     steps:
       - run-all
 
   test-v11:
-    <<: *defaults
     docker:
       - image: node:11
     steps:
       - run-all
 
   publish-v8:
-    <<: *defaults
     docker:
       - image: node:8
     steps:
       - run-all
       - run:
-          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
       - run:
           command: npm publish
 
