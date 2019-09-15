@@ -2,7 +2,7 @@
 
 [![NPM package](https://img.shields.io/npm/v/@rasmuslp/eslint-config.svg)](https://www.npmjs.com/package/@rasmuslp/eslint-config)
 [![CircleCI](https://circleci.com/gh/rasmuslp/eslint-config-rasmuslp.svg?style=shield)](https://circleci.com/gh/rasmuslp/eslint-config-rasmuslp)
-[![Github: Node CI/CD](https://github.com/rasmuslp/eslint-config-rasmuslp/workflows/.github/workflows/nodecicd.yml/badge.svg)](https://github.com/rasmuslp/eslint-config-rasmuslp/actions)
+[![Github: Node CI/CD](https://github.com/rasmuslp/eslint-config-rasmuslp/workflows/Node%20CI%2FCD/badge.svg)](https://github.com/rasmuslp/eslint-config-rasmuslp/actions)
 
 This configuration is based on [https://github.com/standard/eslint-config-standard](https://github.com/standard/eslint-config-standard), but with some notable changes:
 * indentation: tab
@@ -10,7 +10,7 @@ This configuration is based on [https://github.com/standard/eslint-config-standa
 
 And a few other tweaks.
 
-## Installation
+## Installation & usage
 Install eslint
 ```bash
 $ npm install --save-dev eslint
@@ -29,3 +29,12 @@ Configure eslint in your project by extending this configuration in your local `
     "extends": "@rasmuslp"
 }
 ```
+
+## Development
+
+### Release
+Make a release with `np`, without publishing it to NPM:
+```bash
+$ npx np --no-publish
+```
+Then push tags to remote.
