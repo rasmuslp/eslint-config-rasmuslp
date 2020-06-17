@@ -2,27 +2,24 @@
 	"name": "@rasmuslp/eslint-config",
 	"version": "1.2.1",
 	"description": "My take on standardjs",
-	"main": "index.js",
-	"files": [],
-	"scripts": {
-		"lint": "eslint ."
-	},
-	"publishConfig": {
-		"access": "public"
+	"homepage": "https://github.com/rasmuslp/eslint-config-rasmuslp#readme",
+	"bugs": {
+		"url": "https://github.com/rasmuslp/eslint-config-rasmuslp/issues"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/rasmuslp/eslint-config-rasmuslp.git"
 	},
+	"license": "ISC",
 	"author": {
 		"name": "Rasmus Ljungmann Pedersen",
 		"email": "rasmuslp@gmail.com"
 	},
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/rasmuslp/eslint-config-rasmuslp/issues"
+	"main": "index.js",
+	"files": [],
+	"scripts": {
+		"lint": "eslint ."
 	},
-	"homepage": "https://github.com/rasmuslp/eslint-config-rasmuslp#readme",
 	"dependencies": {},
 	"devDependencies": {
 		"eslint": "5.16.0",
@@ -40,5 +37,8 @@
 		"eslint-plugin-node": "^8.0.0",
 		"eslint-plugin-promise": "^4.0.0",
 		"eslint-plugin-standard": "^4.0.0"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
