@@ -1,7 +1,4 @@
 {
 	"root": true,
-	"extends": "./src/typescript.js",
-	"rules": {
-		"@typescript-eslint/no-var-requires": "warn"
-	}
+	"extends": "./src/javascript.js"
 }
