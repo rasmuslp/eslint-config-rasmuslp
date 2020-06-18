@@ -1,2 +1,2 @@
-const js = require('./javascript');
-module.exports = js;
+const theDefault = require('./typescript');
+module.exports = theDefault;
