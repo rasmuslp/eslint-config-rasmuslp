@@ -2,6 +2,15 @@ const common = require('./common');
 
 module.exports = {
 	parser: '@typescript-eslint/parser',
+	settings: {
+		node: {
+			tryExtensions: [
+				'.js',
+				'.ts',
+				'.json'
+			]
+		}
+	},
 	extends: [
 		...common.extends,
 		'plugin:@typescript-eslint/eslint-recommended',
@@ -16,6 +25,7 @@ module.exports = {
 		...common.rules,
 
 		'@typescript-eslint/no-explicit-any': 'off',
+		'node/no-unsupported-features/es-syntax': 'off',
 		'no-console': 'off',
 		'no-multiple-empty-lines': 'warn', // Having uncomitted blocks is common when developing, and then this rule gets tricky
 		'no-return-await': 'off', // So... Its nice to know if the function is async or not
