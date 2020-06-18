@@ -23,7 +23,9 @@
 		"lint": "eslint .",
 		"lint:self-all": "npm run lint:self-js && npm run lint:self-ts",
 		"lint:self-js": "eslint --no-eslintrc --config src/javascript.js .",
-		"lint:self-ts": "eslint --no-eslintrc --config src/typescript.js ."
+		"lint:self-ts": "eslint --no-eslintrc --config src/typescript.js .",
+		"publish:beta": "np --no-publish --no-release-draft --any-branch --tag=beta",
+		"publish:release": "np --no-publish --no-release-draft"
 	},
 	"dependencies": {
 		"@typescript-eslint/parser": "^3.2.0",
@@ -36,7 +38,7 @@
 		"eslint-plugin-node": "11.1.0",
 		"eslint-plugin-promise": "4.2.1",
 		"eslint-plugin-standard": "4.0.1",
-		"np": "4.0.2",
+		"np": "6.2.4",
 		"typescript": "3.9.5"
 	},
 	"peerDependencies": {
