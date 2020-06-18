@@ -1,7 +1,12 @@
 module.exports = {
 	extends: [
 		'eslint:recommended',
+		'plugin:node/recommended',
+		'plugin:promise/recommended', // This may be too much?
 		'standard'
+	],
+	plugins: [
+		'node'
 	],
 	rules: {
 		// Possible Errors
@@ -17,7 +22,8 @@ module.exports = {
 		// Variables
 
 		// Node
-		'callback-return': 'error',
+		'callback-return': 'off',
+		'node/callback-return': 'error', // Migrated from ESLint in ESLint 7
 
 		// Stylistic
 		'brace-style': ['error', 'stroustrup'],
