@@ -2,8 +2,7 @@
 
 [![NPM package](https://img.shields.io/npm/v/@rasmuslp/eslint-config.svg)](https://www.npmjs.com/package/@rasmuslp/eslint-config)
 [![CircleCI](https://circleci.com/gh/rasmuslp/eslint-config-rasmuslp.svg?style=shield)](https://circleci.com/gh/rasmuslp/eslint-config-rasmuslp)
-[![Github: CI](https://github.com/rasmuslp/eslint-config-rasmuslp/workflows/CI/badge.svg)](https://github.com/rasmuslp/eslint-config-rasmuslp/actions)
-[![Github: CD](https://github.com/rasmuslp/eslint-config-rasmuslp/workflows/CD/badge.svg)](https://github.com/rasmuslp/eslint-config-rasmuslp/actions)
+[![Github: CI CD](https://github.com/rasmuslp/eslint-config-rasmuslp/workflows/CI%20CD/badge.svg)](https://github.com/rasmuslp/eslint-config-rasmuslp/actions)
 
 This configuration is based on [standard](https://github.com/standard/eslint-config-standard), but with a few tweaks and some notable changes:
 * indentation: tab
