@@ -26,7 +26,6 @@ module.exports = {
 
 		'@typescript-eslint/no-explicit-any': 'off',
 		'node/no-unsupported-features/es-syntax': 'off',
-		'no-console': 'off',
 		'no-multiple-empty-lines': 'warn', // Having uncomitted blocks is common when developing, and then this rule gets tricky
 		'no-return-await': 'off', // So... Its nice to know if the function is async or not
 		// "require-await": "off",
