@@ -1,59 +1,63 @@
 {
-	"name": "@rasmuslp/eslint-config",
-	"version": "2.0.0-3",
-	"description": "My take on standardjs",
-	"homepage": "https://github.com/rasmuslp/eslint-config-rasmuslp#readme",
-	"bugs": {
-		"url": "https://github.com/rasmuslp/eslint-config-rasmuslp/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/rasmuslp/eslint-config-rasmuslp.git"
-	},
-	"license": "ISC",
-	"author": {
-		"name": "Rasmus Ljungmann Pedersen",
-		"email": "rasmuslp@gmail.com"
-	},
-	"main": "src/index.js",
-	"files": [
-		"src/"
-	],
-	"scripts": {
-		"lint": "eslint .",
-		"lint:self-all": "npm run lint:self-js && npm run lint:self-ts",
-		"lint:self-js": "eslint --no-eslintrc --config src/javascript.js .",
-		"lint:self-ts": "eslint --no-eslintrc --config src/typescript.js .",
-		"publish:beta": "np --no-publish --no-release-draft --any-branch",
-		"publish:release": "np --no-publish --no-release-draft"
-	},
-	"dependencies": {
-		"@typescript-eslint/parser": "^3.2.0",
-		"eslint-config-standard": "^14.1.1"
-	},
-	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "3.3.0",
-		"eslint": "7.2.0",
-		"eslint-plugin-import": "2.21.2",
-		"eslint-plugin-node": "11.1.0",
-		"eslint-plugin-promise": "4.2.1",
-		"eslint-plugin-standard": "4.0.1",
-		"np": "6.2.4",
-		"typescript": "3.9.5"
-	},
-	"peerDependencies": {
-		"@typescript-eslint/eslint-plugin": "^3.2.0",
-		"eslint": "^7.2.0",
-		"eslint-plugin-import": "^2.18.0",
-		"eslint-plugin-node": "^11.1.0",
-		"eslint-plugin-promise": "^4.2.1",
-		"eslint-plugin-standard": "^4.0.0",
-		"typescript": "^3.9.0"
-	},
-	"engines": {
-		"node": ">=10.13.0"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@rasmuslp/eslint-config",
+  "version": "2.0.0-3",
+  "description": "My take on standardjs",
+  "homepage": "https://github.com/rasmuslp/eslint-config-rasmuslp#readme",
+  "bugs": {
+    "url": "https://github.com/rasmuslp/eslint-config-rasmuslp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rasmuslp/eslint-config-rasmuslp.git"
+  },
+  "license": "ISC",
+  "author": {
+    "name": "Rasmus Ljungmann Pedersen",
+    "email": "rasmuslp@gmail.com"
+  },
+  "main": "src/index.js",
+  "files": [
+    "src/"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "lint:self-all": "npm run lint:self-js && npm run lint:self-ts",
+    "lint:self-js": "eslint --no-eslintrc --config src/javascript.js .",
+    "lint:self-ts": "eslint --no-eslintrc --config src/typescript.js .",
+    "publish:beta": "np --no-publish --no-release-draft --any-branch",
+    "publish:release": "np --no-publish --no-release-draft",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "dependencies": {
+    "@typescript-eslint/parser": "^3.2.0",
+    "eslint-config-standard": "^14.1.1",
+    "snyk": "^1.346.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "3.3.0",
+    "eslint": "7.2.0",
+    "eslint-plugin-import": "2.21.2",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "np": "6.2.4",
+    "typescript": "3.9.5"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.2.0",
+    "eslint": "^7.2.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "typescript": "^3.9.0"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "snyk": true
 }
