@@ -1,44 +1,59 @@
 {
 	"name": "@rasmuslp/eslint-config",
-	"version": "1.2.1",
+	"version": "2.0.0-3",
 	"description": "My take on standardjs",
-	"main": "index.js",
-	"files": [],
-	"scripts": {
-		"lint": "eslint ."
-	},
-	"publishConfig": {
-		"access": "public"
+	"homepage": "https://github.com/rasmuslp/eslint-config-rasmuslp#readme",
+	"bugs": {
+		"url": "https://github.com/rasmuslp/eslint-config-rasmuslp/issues"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/rasmuslp/eslint-config-rasmuslp.git"
 	},
+	"license": "ISC",
 	"author": {
 		"name": "Rasmus Ljungmann Pedersen",
 		"email": "rasmuslp@gmail.com"
 	},
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/rasmuslp/eslint-config-rasmuslp/issues"
+	"main": "src/index.js",
+	"files": [
+		"src/"
+	],
+	"scripts": {
+		"lint": "eslint .",
+		"lint:self-all": "npm run lint:self-js && npm run lint:self-ts",
+		"lint:self-js": "eslint --no-eslintrc --config src/javascript.js .",
+		"lint:self-ts": "eslint --no-eslintrc --config src/typescript.js .",
+		"publish:beta": "np --no-publish --no-release-draft --any-branch",
+		"publish:release": "np --no-publish --no-release-draft"
 	},
-	"homepage": "https://github.com/rasmuslp/eslint-config-rasmuslp#readme",
-	"dependencies": {},
+	"dependencies": {
+		"@typescript-eslint/parser": "^3.2.0",
+		"eslint-config-standard": "^14.1.1"
+	},
 	"devDependencies": {
-		"eslint": "5.14.1",
-		"eslint-config-standard": "12.0.0",
-		"eslint-plugin-import": "2.16.0",
-		"eslint-plugin-node": "8.0.1",
-		"eslint-plugin-promise": "4.0.1",
-		"eslint-plugin-standard": "4.0.0",
-		"np": "4.0.2"
+		"@typescript-eslint/eslint-plugin": "3.3.0",
+		"eslint": "7.2.0",
+		"eslint-plugin-import": "2.21.2",
+		"eslint-plugin-node": "11.1.0",
+		"eslint-plugin-promise": "4.2.1",
+		"eslint-plugin-standard": "4.0.1",
+		"np": "6.2.4",
+		"typescript": "3.9.5"
 	},
 	"peerDependencies": {
-		"eslint": ">=5.0.0",
-		"eslint-config-standard": ">=12.0.0",
-		"eslint-plugin-import": ">=2.13.0",
-		"eslint-plugin-node": ">=7.0.0",
-		"eslint-plugin-promise": ">=4.0.0",
-		"eslint-plugin-standard": ">=4.0.0"
+		"@typescript-eslint/eslint-plugin": "^3.2.0",
+		"eslint": "^7.2.0",
+		"eslint-plugin-import": "^2.18.0",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-promise": "^4.2.1",
+		"eslint-plugin-standard": "^4.0.0",
+		"typescript": "^3.9.0"
+	},
+	"engines": {
+		"node": ">=10.13.0"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
