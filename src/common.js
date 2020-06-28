@@ -19,7 +19,7 @@ exports.rules = {
 	'consistent-return': ['error', { treatUndefinedAsUnspecified: true }],
 	curly: 'error',
 	'default-case': 'error',
-	'require-await': 'error',
+	'require-await': 'off',
 
 	// Variables
 
