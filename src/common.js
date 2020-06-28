@@ -16,7 +16,7 @@ exports.rules = {
 	'no-console': 'warn',
 
 	// Best Practices
-	'consistent-return': ['error', { treatUndefinedAsUnspecified: true }],
+	'consistent-return': 'off',
 	curly: 'error',
 	'default-case': 'error',
 	'require-await': 'off',
