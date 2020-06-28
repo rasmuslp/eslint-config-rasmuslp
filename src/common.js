@@ -1,7 +1,8 @@
 exports.extends = [
 	'eslint:recommended',
 	'plugin:node/recommended',
-	'plugin:promise/recommended', // This may be too much?
+	'plugin:promise/recommended',
+	'plugin:unicorn/recommended',
 	'standard'
 ];
 
@@ -34,5 +35,8 @@ exports.rules = {
 	'no-tabs': 'off',
 	'quote-props': ['error', 'as-needed'],
 	semi: ['error', 'always'],
-	'space-before-function-paren': ['error', { anonymous: 'never', named: 'never', asyncArrow: 'always' }]
+	'space-before-function-paren': ['error', { anonymous: 'never', named: 'never', asyncArrow: 'always' }],
+
+	// Unicorn
+	'unicorn/filename-case': 'off'
 };

@@ -22,6 +22,7 @@ $ npm install --save-dev \
 		eslint-plugin-node \
 		eslint-plugin-promise \
 		eslint-plugin-standard \
+		eslint-plugin-unicorn \
 		typescript
 ```
 
