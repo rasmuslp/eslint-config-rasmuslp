@@ -61,7 +61,7 @@ Configure eslint in your project by extending this configuration in your local `
 ```json
 {
 	"root": true,
-	"extends": "@rasmuslp/src/javascript"
+	"extends": "@rasmuslp/eslint-config/src/javascript"
 }
 ```
 
