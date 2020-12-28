@@ -24,9 +24,8 @@ module.exports = {
 	rules: {
 		...common.rules,
 		'@typescript-eslint/require-await': 'off',
-		'@typescript-eslint/no-explicit-any': 'off',
 		'node/no-unsupported-features/es-syntax': 'off',
-		'no-multiple-empty-lines': 'warn', // Having uncomitted blocks is common when developing, and then this rule gets tricky
+		'no-multiple-empty-lines': 'warn', // Having uncommitted blocks is common when developing, and then this rule gets tricky
 		'@typescript-eslint/array-type': 'error',
 		'@typescript-eslint/indent': ['error', 'tab']
 	}
