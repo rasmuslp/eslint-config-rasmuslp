@@ -38,5 +38,18 @@ exports.rules = {
 	'space-before-function-paren': ['error', { anonymous: 'never', named: 'never', asyncArrow: 'always' }],
 
 	// Unicorn
-	'unicorn/filename-case': 'off'
+	'unicorn/filename-case': 'off',
+	'unicorn/prevent-abbreviations': [
+		'error',
+		{
+			replacements: {
+				fn: false,
+				func: {
+					fn: true
+				},
+				i: false,
+				j: false
+			}
+		}
+	]
 };
