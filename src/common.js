@@ -19,6 +19,7 @@ exports.rules = {
 	'consistent-return': 'off',
 	curly: 'error',
 	'default-case': 'error',
+	'no-void': 'off',
 	'require-await': 'off',
 
 	// Variables
