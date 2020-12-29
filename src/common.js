@@ -30,7 +30,6 @@ exports.rules = {
 
 	// Stylistic
 	'brace-style': ['error', 'stroustrup'],
-	indent: ['error', 'tab', { SwitchCase: 1 }],
 	'no-lonely-if': 'error',
 	'no-nested-ternary': 'error',
 	'no-tabs': 'off',

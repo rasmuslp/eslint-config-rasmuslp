@@ -8,7 +8,7 @@ module.exports = {
 		...common.plugins
 	],
 	rules: {
-		...common.rules
+		...common.rules,
 
 		// Possible Errors
 
@@ -19,5 +19,6 @@ module.exports = {
 		// Node
 
 		// Stylistic
+		indent: ['error', 'tab', { SwitchCase: 1 }]
 	}
 };

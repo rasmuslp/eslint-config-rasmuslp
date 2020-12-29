@@ -30,6 +30,7 @@ module.exports = {
 		'node/no-unsupported-features/es-syntax': 'off',
 		'no-multiple-empty-lines': 'warn', // Having uncommitted blocks is common when developing, and then this rule gets tricky
 		'@typescript-eslint/array-type': 'error',
-		'@typescript-eslint/indent': ['error', 'tab']
+		indent: 'off',
+		'@typescript-eslint/indent': ['error', 'tab', { SwitchCase: 1 }]
 	}
 };
