@@ -20,12 +20,16 @@
 		"src/"
 	],
 	"scripts": {
+		"prebuild": "rm -rf dist/",
+		"build": "tsc --noEmit false --outDir dist/",
+		"full-test": "npm run type-check && npm run lint",
 		"lint": "eslint .",
-		"lint:self-all": "npm run lint:self-js && npm run lint:self-ts",
-		"lint:self-js": "eslint --no-eslintrc --config src/javascript.js .",
-		"lint:self-ts": "eslint --no-eslintrc --config src/typescript.js .",
+		"lint:all": "npm run lint:js && npm run lint:ts",
+		"lint:js": "eslint --no-eslintrc --config .eslintrc.json .",
+		"lint:ts": "eslint --no-eslintrc --config .eslintrc.typescript.json .",
 		"publish:beta": "np --no-publish --no-release-draft --any-branch",
-		"publish:release": "np --no-publish --no-release-draft"
+		"publish:release": "np --no-publish --no-release-draft",
+		"type-check": "tsc"
 	},
 	"dependencies": {
 		"@typescript-eslint/parser": "^4.11.1",

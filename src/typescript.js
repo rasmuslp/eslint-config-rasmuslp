@@ -2,6 +2,9 @@ const common = require('./common');
 
 module.exports = {
 	parser: '@typescript-eslint/parser',
+	parserOptions: {
+		project: './tsconfig.json'
+	},
 	settings: {
 		node: {
 			tryExtensions: [
