@@ -22,13 +22,13 @@
 	"scripts": {
 		"prebuild": "rm -rf dist/",
 		"build": "tsc --noEmit false --outDir dist/",
-		"full-test": "npm run type-check && npm run lint",
 		"lint": "eslint .",
 		"lint:all": "npm run lint:js && npm run lint:ts",
 		"lint:js": "eslint --no-eslintrc --config .eslintrc.json .",
 		"lint:ts": "eslint --no-eslintrc --config .eslintrc.typescript.json .",
 		"publish:beta": "np --no-publish --no-release-draft --any-branch",
 		"publish:release": "np --no-publish --no-release-draft",
+		"test": "npm run type-check && npm run lint",
 		"type-check": "tsc"
 	},
 	"dependencies": {
