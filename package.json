@@ -1,6 +1,6 @@
 {
 	"name": "@rasmuslp/eslint-config",
-	"version": "2.0.0-15",
+	"version": "2.0.0-16",
 	"description": "My take on standardjs",
 	"homepage": "https://github.com/rasmuslp/eslint-config-rasmuslp#readme",
 	"bugs": {
