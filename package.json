@@ -20,8 +20,6 @@
 		"src/"
 	],
 	"scripts": {
-		"prebuild": "rm -rf dist/",
-		"build": "tsc --noEmit false --outDir dist/",
 		"lint": "eslint .",
 		"lint:all": "npm run lint:js && npm run lint:ts",
 		"lint:js": "eslint --no-eslintrc --config .eslintrc.json .",
