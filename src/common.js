@@ -2,8 +2,7 @@ exports.extends = [
 	'eslint:recommended',
 	'plugin:node/recommended',
 	'plugin:promise/recommended',
-	'plugin:unicorn/recommended',
-	'standard'
+	'plugin:unicorn/recommended'
 ];
 
 exports.plugins = [
