@@ -74,8 +74,10 @@ module.exports = {
 		'no-restricted-syntax': 'off',
 		'no-void': 'off',
 		'no-multiple-empty-lines': ['warn', { max: 1, maxBOF: 0, maxEOF: 0 }],
+		'unicorn/consistent-destructuring': 'off',
 		'unicorn/filename-case': 'off',
 		'unicorn/prefer-module': 'off',
+		'unicorn/prefer-node-protocol': 'off', // conflicts with node/no-missing-import
 		'unicorn/prevent-abbreviations': ['error', {
 			replacements: {
 				args: false,
