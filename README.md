@@ -20,8 +20,8 @@ $ npm install --save-dev \
 		eslint-plugin-eslint-comments@3 \
 		eslint-plugin-import@2 \
 		eslint-plugin-node@11 \
-		eslint-plugin-promise5 \
-		eslint-plugin-unicorn@25 \
+		eslint-plugin-promise@5 \
+		eslint-plugin-unicorn@34 \
 		typescript@4
 ```
 
