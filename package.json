@@ -26,8 +26,7 @@
 		"lint:ts": "eslint --no-eslintrc --config .eslintrc.typescript.json .",
 		"publish:beta": "np --no-publish --no-release-draft --any-branch",
 		"publish:release": "np --no-publish --no-release-draft",
-		"test": "npm run type-check && npm run lint",
-		"type-check": "tsc"
+		"test": "npm run lint:all"
 	},
 	"dependencies": {
 		"@typescript-eslint/parser": "^4.28.5",
