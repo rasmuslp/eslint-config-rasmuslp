@@ -38,6 +38,7 @@ exports.rules = {
 
 	// Unicorn
 	'unicorn/filename-case': 'off',
+	'unicorn/prefer-module': 'off',
 	'unicorn/prevent-abbreviations': [
 		'error',
 		{

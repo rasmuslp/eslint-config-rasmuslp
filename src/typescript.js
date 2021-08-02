@@ -75,6 +75,7 @@ module.exports = {
 		'no-void': 'off',
 		'no-multiple-empty-lines': ['warn', { max: 1, maxBOF: 0, maxEOF: 0 }],
 		'unicorn/filename-case': 'off',
+		'unicorn/prefer-module': 'off',
 		'unicorn/prevent-abbreviations': ['error', {
 			replacements: {
 				args: false,
