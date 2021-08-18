@@ -33,8 +33,8 @@ module.exports = {
 		}],
 		'@typescript-eslint/comma-dangle': ['error', 'never'],
 		'@typescript-eslint/indent': ['error', 'tab', airbnbTypeScript.rules['@typescript-eslint/indent'][2]],
-		'@typescript-eslint/no-use-before-define': 'off',
 		'@typescript-eslint/no-shadow': 'off',
+		'@typescript-eslint/no-use-before-define': 'off',
 		'@typescript-eslint/return-await': ['error', 'in-try-catch'],
 		'@typescript-eslint/space-before-function-paren': ['error', {
 			anonymous: 'never',
@@ -55,7 +55,15 @@ module.exports = {
 		'function-paren-newline': ['error', 'multiline'],
 		'import/prefer-default-export': 'off',
 		'max-len': 'off',
+		'no-await-in-loop': 'off',
+		'no-continue': 'off',
+		'no-multiple-empty-lines': ['warn', { max: 1, maxBOF: 0, maxEOF: 0 }],
+		'no-plusplus': ['error', {
+			allowForLoopAfterthoughts: true
+		}],
+		'no-restricted-syntax': 'off',
 		'no-tabs': 'off',
+		'no-void': 'off',
 		'node/callback-return': 'error',
 		'node/no-missing-import': ['error', {
 			tryExtensions: ['.js', '.d.ts', '.ts']
@@ -65,14 +73,6 @@ module.exports = {
 				'modules'
 			]
 		}],
-		'no-await-in-loop': 'off',
-		'no-continue': 'off',
-		'no-plusplus': ['error', {
-			allowForLoopAfterthoughts: true
-		}],
-		'no-restricted-syntax': 'off',
-		'no-void': 'off',
-		'no-multiple-empty-lines': ['warn', { max: 1, maxBOF: 0, maxEOF: 0 }],
 		'unicorn/consistent-destructuring': 'off',
 		'unicorn/filename-case': 'off',
 		'unicorn/prefer-module': 'off',
