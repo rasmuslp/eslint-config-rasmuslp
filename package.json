@@ -1,6 +1,6 @@
 {
 	"name": "@rasmuslp/eslint-config",
-	"version": "3.0.1",
+	"version": "3.1.0-0",
 	"description": "My take on airbnb",
 	"homepage": "https://github.com/rasmuslp/eslint-config-rasmuslp#readme",
 	"bugs": {
