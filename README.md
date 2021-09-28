@@ -49,7 +49,9 @@ Configure eslint in your project by extending this configuration in your local `
 	"parserOptions": {
 		"project": "./tsconfig.eslint.json"
 	},
-	"extends": "@rasmuslp"
+	"extends": [
+		"@rasmuslp"
+	]
 }
 ```
 The TypeScript config is utilized by certain rules that require type information.
@@ -68,6 +70,26 @@ Lastly, specify the minimum supported Node version in `package.json` to enable c
 	"engines": {
 		"node": ">=10.13.0"
 	}
+```
+
+### TypeScript and React
+Install additional dependencies
+```bash
+$ npm install --save-dev eslint-config-airbnb
+```
+
+Configure eslint in your project by extending this configuration in your local `.eslintrc.json`
+```json
+{
+	"root": true,
+	"extends": [
+		// Load broader rules first
+		"airbnb",
+		"airbnb-typescript",
+		// Then override with more specific rule set
+		"@rasmuslp/eslint-config/src/typescript-react"
+	]
+}
 ```
 
 ### JavaScript
