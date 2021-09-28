@@ -9,13 +9,25 @@ This configuration is based on [eslint-config-airbnb-typescript](https://github.
 ## Configurations
 This project provides both a JavaScript and a TypeScript configuration file. **Defaults to** TypeScript.
 
-## Installation & usage
+## Installation
 Install the config:
 ```bash
 $ npm install --save-dev @rasmuslp/eslint-config
 ```
 
-NB: For npm 6 the peer dependencies also needs to be installed manually
+### NB: For npm 6 the peer dependencies also needs to be installed manually.
+
+See peer dependencies:
+```bash
+$ npm info "@rasmuslp/eslint-config@latest" peerDependencies
+```
+
+Automatically install peer dependencies:
+```bash
+$ npx install-peerdeps --dev @rasmuslp/eslint-config
+```
+
+Or manually install peer dependencies:
 ```bash
 $ npm install --save-dev \
 		@typescript-eslint/eslint-plugin@4 \
@@ -29,6 +41,7 @@ $ npm install --save-dev \
 		typescript@4
 ```
 
+## Usage
 Configure eslint in your project by extending this configuration in your local `.eslintrc.json`
 ```json
 {
