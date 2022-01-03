@@ -33,7 +33,6 @@ $ npm install --save-dev \
 		@typescript-eslint/eslint-plugin@4 \
 		eslint@7 \
 		eslint-plugin-deprecation@1 \
-		eslint-plugin-eslint-comments@3 \
 		eslint-plugin-import@2 \
 		eslint-plugin-node@11 \
 		eslint-plugin-promise@5 \

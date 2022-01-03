@@ -12,7 +12,6 @@ module.exports = {
 	},
 	extends: [
 		'eslint:recommended',
-		'plugin:eslint-comments/recommended',
 		'plugin:node/recommended',
 		'plugin:promise/recommended',
 		'plugin:unicorn/recommended',
@@ -49,10 +48,6 @@ module.exports = {
 		}],
 		curly: ['error', 'all'],
 		'deprecation/deprecation': 'warn',
-		'eslint-comments/disable-enable-pair': ['error', {
-			allowWholeFile: true
-		}],
-		'eslint-comments/no-unused-disable': 'error',
 		'function-paren-newline': ['error', 'multiline'],
 		'import/prefer-default-export': 'off',
 		'max-len': 'off',
