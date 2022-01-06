@@ -30,14 +30,13 @@ $ npx install-peerdeps --dev @rasmuslp/eslint-config
 Or manually install peer dependencies:
 ```bash
 $ npm install --save-dev \
-		@typescript-eslint/eslint-plugin@4 \
-		eslint@7 \
+		@typescript-eslint/eslint-plugin@5 \
+		eslint@8 \
 		eslint-plugin-deprecation@1 \
-		eslint-plugin-eslint-comments@3 \
 		eslint-plugin-import@2 \
 		eslint-plugin-node@11 \
-		eslint-plugin-promise@5 \
-		eslint-plugin-unicorn@36 \
+		eslint-plugin-promise@6 \
+		eslint-plugin-unicorn@40 \
 		typescript@4
 ```
 
@@ -68,7 +67,7 @@ To lint all project files, besides what the default `tsconfig` does, add `tsconf
 Lastly, specify the minimum supported Node version in `package.json` to enable checks for using unsupported Node features.
 ```json
 	"engines": {
-		"node": ">=10.13.0"
+		"node": ">=12.22.0"
 	}
 ```
 
