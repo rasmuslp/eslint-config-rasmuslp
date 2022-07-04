@@ -54,7 +54,7 @@
 		"eslint-plugin-unicorn": "^43.0.0"
 	},
 	"engines": {
-		"node": ">=12.22.0"
+		"node": ">=14.15.0"
 	},
 	"publishConfig": {
 		"access": "public"
