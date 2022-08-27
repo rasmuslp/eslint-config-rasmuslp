@@ -36,7 +36,7 @@ $ npm install --save-dev \
 		eslint-plugin-import@2 \
 		eslint-plugin-node@11 \
 		eslint-plugin-promise@6 \
-		eslint-plugin-unicorn@42 \
+		eslint-plugin-unicorn@43 \
 		typescript@4
 ```
 
