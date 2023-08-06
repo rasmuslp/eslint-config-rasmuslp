@@ -52,6 +52,23 @@ module.exports = {
 		}],
 		curly: ['error', 'all'],
 		'function-paren-newline': ['error', 'multiline'],
+		'import/order': [
+			'error',
+			{
+				alphabetize: {
+					order: 'asc',
+					caseInsensitive: true
+				},
+				'newlines-between': 'always',
+				pathGroups: [
+					{
+						pattern: '@/**',
+						group: 'external',
+						position: 'after'
+					}
+				]
+			}
+		],
 		'import/prefer-default-export': 'off',
 		'max-len': 'off',
 		'no-await-in-loop': 'off',
@@ -72,6 +89,12 @@ module.exports = {
 				'modules'
 			]
 		}],
+		'sort-imports': [
+			'error',
+			{
+				ignoreDeclarationSort: true
+			}
+		],
 		'unicorn/consistent-destructuring': 'off',
 		'unicorn/filename-case': 'off',
 		'unicorn/prefer-module': 'off',
