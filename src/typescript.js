@@ -12,6 +12,7 @@ module.exports = {
 	},
 	extends: [
 		'eslint:recommended',
+		'plugin:deprecation/recommended',
 		'plugin:node/recommended',
 		'plugin:promise/recommended',
 		'plugin:unicorn/recommended',
@@ -23,7 +24,6 @@ module.exports = {
 	],
 	plugins: [
 		'@typescript-eslint',
-		'deprecation',
 		'promise'
 	],
 	rules: {
@@ -51,7 +51,6 @@ module.exports = {
 			treatUndefinedAsUnspecified: false
 		}],
 		curly: ['error', 'all'],
-		'deprecation/deprecation': 'warn',
 		'function-paren-newline': ['error', 'multiline'],
 		'import/prefer-default-export': 'off',
 		'max-len': 'off',
