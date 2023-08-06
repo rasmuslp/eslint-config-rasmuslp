@@ -4,9 +4,7 @@ module.exports = {
 	extends: [
 		...common.extends
 	],
-	plugins: [
-		...common.plugins
-	],
+	plugins: [],
 	rules: {
 		...common.rules,
 

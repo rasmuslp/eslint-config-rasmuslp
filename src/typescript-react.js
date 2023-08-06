@@ -15,7 +15,7 @@ module.exports = {
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
 		'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
 
-		'node/no-missing-import': ['error', {
+		'n/no-missing-import': ['error', {
 			tryExtensions: ['.js', '.jsx', '.d.ts', '.ts', '.tsx']
 		}],
 		'react/jsx-indent': ['error', 'tab'],

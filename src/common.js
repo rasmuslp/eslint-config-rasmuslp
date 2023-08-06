@@ -1,12 +1,8 @@
 exports.extends = [
 	'eslint:recommended',
-	'plugin:node/recommended',
+	'plugin:n/recommended',
 	'plugin:promise/recommended',
 	'plugin:unicorn/recommended'
-];
-
-exports.plugins = [
-	'node'
 ];
 
 exports.rules = {
@@ -25,7 +21,7 @@ exports.rules = {
 
 	// Node
 	'callback-return': 'off',
-	'node/callback-return': 'error', // Migrated from ESLint in ESLint 7
+	'n/callback-return': 'error', // Migrated from ESLint in ESLint 7
 
 	// Stylistic
 	'brace-style': ['error', 'stroustrup'],

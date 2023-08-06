@@ -13,7 +13,7 @@ module.exports = {
 	extends: [
 		'eslint:recommended',
 		'plugin:deprecation/recommended',
-		'plugin:node/recommended',
+		'plugin:n/recommended',
 		'plugin:promise/recommended',
 		'plugin:unicorn/recommended',
 		'plugin:@typescript-eslint/eslint-recommended',
@@ -63,11 +63,11 @@ module.exports = {
 		'no-restricted-syntax': 'off',
 		'no-tabs': 'off',
 		'no-void': 'off',
-		'node/callback-return': 'error',
-		'node/no-missing-import': ['error', {
-			tryExtensions: ['.js', '.d.ts', '.ts']
+		'n/callback-return': 'error',
+		'n/no-missing-import': ['error', {
+			// tryExtensions: ['.js', '.d.ts', '.ts'] // https://github.com/eslint-community/eslint-plugin-n/issues/33
 		}],
-		'node/no-unsupported-features/es-syntax': ['error', {
+		'n/no-unsupported-features/es-syntax': ['error', {
 			ignores: [
 				'modules'
 			]
