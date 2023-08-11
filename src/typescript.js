@@ -16,9 +16,8 @@ module.exports = {
 		'plugin:n/recommended',
 		'plugin:promise/recommended',
 		'plugin:unicorn/recommended',
-		'plugin:@typescript-eslint/eslint-recommended',
-		'plugin:@typescript-eslint/recommended',
-		'plugin:@typescript-eslint/recommended-requiring-type-checking',
+		'plugin:@typescript-eslint/strict-type-checked',
+		'plugin:@typescript-eslint/stylistic-type-checked',
 		'airbnb-base',
 		'airbnb-typescript/base'
 	],
@@ -27,12 +26,10 @@ module.exports = {
 		'promise'
 	],
 	rules: {
-		'@typescript-eslint/array-type': 'error',
 		'@typescript-eslint/brace-style': ['error', 'stroustrup', {
 			allowSingleLine: false
 		}],
 		'@typescript-eslint/comma-dangle': ['error', 'never'],
-		'@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
 		'@typescript-eslint/indent': ['error', 'tab', airbnbTypeScript.rules['@typescript-eslint/indent'][2]],
 		'@typescript-eslint/member-delimiter-style': 'error',
 		'@typescript-eslint/method-signature-style': ['error', 'method'],
