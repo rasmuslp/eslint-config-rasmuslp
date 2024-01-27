@@ -30,6 +30,8 @@ module.exports = {
 			allowSingleLine: false
 		}],
 		'@typescript-eslint/comma-dangle': ['error', 'never'],
+		'@typescript-eslint/consistent-type-exports': 'error',
+		'@typescript-eslint/consistent-type-imports': 'error',
 		'@typescript-eslint/indent': ['error', 'tab', airbnbTypeScript.rules['@typescript-eslint/indent'][2]],
 		'@typescript-eslint/member-delimiter-style': 'error',
 		'@typescript-eslint/method-signature-style': ['error', 'method'],
@@ -54,6 +56,7 @@ module.exports = {
 			{
 				alphabetize: {
 					order: 'asc',
+					orderImportKind: 'desc',
 					caseInsensitive: true
 				},
 				'newlines-between': 'always',
@@ -66,6 +69,7 @@ module.exports = {
 				]
 			}
 		],
+		'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
 		'import/prefer-default-export': 'off',
 		'max-len': 'off',
 		'no-await-in-loop': 'off',
