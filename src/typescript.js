@@ -96,7 +96,6 @@ module.exports = {
 				ignoreDeclarationSort: true
 			}
 		],
-		'unicorn/consistent-destructuring': 'off',
 		'unicorn/filename-case': 'off',
 		'unicorn/prefer-module': 'off',
 		'unicorn/prefer-node-protocol': 'off', // conflicts with node/no-missing-import
