@@ -54,7 +54,7 @@ To lint all project files, besides what the default `tsconfig` does, add `tsconf
 Lastly, specify the minimum supported Node version in `package.json` to enable checks for using unsupported Node features.
 ```json
 	"engines": {
-		"node": ">=16.13.0"
+		"node": ">=18.18.0"
 	}
 ```
 
