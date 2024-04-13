@@ -21,8 +21,7 @@ module.exports = {
 		'airbnb-typescript/base'
 	],
 	plugins: [
-		'@typescript-eslint',
-		'promise'
+		'@typescript-eslint'
 	],
 	rules: {
 		'@typescript-eslint/brace-style': ['error', 'stroustrup', {
