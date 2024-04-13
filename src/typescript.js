@@ -2,13 +2,12 @@ const airbnbTypeScript = require('eslint-config-airbnb-typescript/lib/shared');
 
 module.exports = {
 	env: {
-		es2017: true,
+		es2023: true,
 		node: true
 	},
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
-		ecmaVersion: 2017,
-		project: './tsconfig.json'
+		project: true
 	},
 	extends: [
 		'eslint:recommended',
