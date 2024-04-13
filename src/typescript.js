@@ -109,5 +109,6 @@ module.exports = {
 				j: false
 			}
 		}]
-	}
+	},
+	reportUnusedDisableDirectives: true
 };
