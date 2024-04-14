@@ -36,6 +36,9 @@ module.exports = {
 		'@typescript-eslint/non-nullable-type-assertion-style': 'error',
 		'@typescript-eslint/no-shadow': 'off',
 		'@typescript-eslint/no-use-before-define': 'off',
+		'@typescript-eslint/restrict-template-expressions': ['error', {
+			allowNumber: true
+		}],
 		'@typescript-eslint/return-await': ['error', 'in-try-catch'],
 		'@typescript-eslint/space-before-function-paren': ['error', {
 			anonymous: 'never',
