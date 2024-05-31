@@ -16,7 +16,18 @@ module.exports = {
 		'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
 
 		'n/no-missing-import': ['error', {
-			tryExtensions: ['.js', '.jsx', '.d.ts', '.ts', '.tsx']
+			tryExtensions: [
+				'.js',
+				'.ts',
+				'.mjs',
+				'.mts',
+				'.cjs',
+				'.cts',
+				'.json',
+				'.node',
+				'.jsx',
+				'.tsx'
+			]
 		}],
 		'react/jsx-indent': ['error', 'tab'],
 		'react/jsx-indent-props': ['error', 'tab']

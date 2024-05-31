@@ -83,9 +83,6 @@ module.exports = {
 		'no-tabs': 'off',
 		'no-void': 'off',
 		'n/callback-return': 'error',
-		'n/no-missing-import': ['error', {
-			// tryExtensions: ['.js', '.d.ts', '.ts'] // https://github.com/eslint-community/eslint-plugin-n/issues/33
-		}],
 		'n/no-unsupported-features/es-syntax': ['error', {
 			ignores: [
 				'modules'
