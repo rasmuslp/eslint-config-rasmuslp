@@ -29,30 +29,30 @@
 		"test": "npm run lint:all"
 	},
 	"dependencies": {
-		"@typescript-eslint/parser": "^7.13.0",
+		"@typescript-eslint/parser": "^7.15.0",
 		"eslint-config-airbnb-base": "^15.0.0",
 		"eslint-config-airbnb-typescript": "^18.0.0"
 	},
 	"devDependencies": {
-		"@types/node": "18.19.34",
-		"@typescript-eslint/eslint-plugin": "7.13.0",
+		"@types/node": "18.19.39",
+		"@typescript-eslint/eslint-plugin": "7.15.0",
 		"eslint": "8.57.0",
 		"eslint-plugin-deprecation": "3.0.0",
 		"eslint-plugin-import": "2.29.1",
-		"eslint-plugin-n": "17.8.1",
-		"eslint-plugin-promise": "6.2.0",
-		"eslint-plugin-unicorn": "53.0.0",
-		"np": "10.0.5",
-		"typescript": "5.4.5"
+		"eslint-plugin-n": "17.9.0",
+		"eslint-plugin-promise": "6.4.0",
+		"eslint-plugin-unicorn": "54.0.0",
+		"np": "10.0.6",
+		"typescript": "5.5.3"
 	},
 	"peerDependencies": {
-		"@typescript-eslint/eslint-plugin": "^7.13.0",
+		"@typescript-eslint/eslint-plugin": "^7.15.0",
 		"eslint": "^8.57.0",
 		"eslint-plugin-deprecation": "^3.0.0",
 		"eslint-plugin-import": "^2.29.1",
-		"eslint-plugin-n": "^17.8.1",
-		"eslint-plugin-promise": "^6.2.0",
-		"eslint-plugin-unicorn": "^53.0.0"
+		"eslint-plugin-n": "^17.9.0",
+		"eslint-plugin-promise": "^6.4.0",
+		"eslint-plugin-unicorn": "^54.0.0"
 	},
 	"engines": {
 		"node": ">=18.18.0"
