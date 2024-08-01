@@ -32,7 +32,7 @@ module.exports = {
 		'@typescript-eslint/consistent-type-imports': 'error',
 		'@typescript-eslint/indent': ['error', 'tab', airbnbTypeScript.rules['@typescript-eslint/indent'][2]],
 		'@typescript-eslint/member-delimiter-style': 'error',
-		'@typescript-eslint/method-signature-style': ['error', 'method'],
+		'@typescript-eslint/method-signature-style': ['error', 'property'],
 		'@typescript-eslint/non-nullable-type-assertion-style': 'error',
 		'@typescript-eslint/no-shadow': 'off',
 		'@typescript-eslint/no-use-before-define': 'off',
