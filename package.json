@@ -34,7 +34,7 @@
 		"eslint-config-airbnb-typescript": "^18.0.0"
 	},
 	"devDependencies": {
-		"@types/node": "18.19.71",
+		"@types/node": "18.19.74",
 		"@typescript-eslint/eslint-plugin": "7.18.0",
 		"eslint": "8.57.1",
 		"eslint-plugin-deprecation": "3.0.0",
@@ -42,7 +42,7 @@
 		"eslint-plugin-n": "17.15.1",
 		"eslint-plugin-promise": "7.2.1",
 		"eslint-plugin-unicorn": "56.0.1",
-		"np": "10.1.0",
+		"np": "10.2.0",
 		"typescript": "5.7.3"
 	},
 	"peerDependencies": {
