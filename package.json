@@ -10,7 +10,7 @@
 		"type": "git",
 		"url": "git+https://github.com/rasmuslp/eslint-config-rasmuslp.git"
 	},
-	"license": "ISC",
+	"license": "BSD-3-Clause",
 	"author": {
 		"name": "Rasmus Ljungmann Pedersen",
 		"email": "rasmuslp@gmail.com"
