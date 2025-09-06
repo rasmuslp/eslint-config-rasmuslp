@@ -1,7 +1,7 @@
 {
 	"name": "@rasmuslp/eslint-config",
-	"version": "7.3.14",
-	"description": "My take on airbnb",
+	"version": "8.0.0-4",
+	"description": "My configs",
 	"homepage": "https://github.com/rasmuslp/eslint-config-rasmuslp#readme",
 	"bugs": {
 		"url": "https://github.com/rasmuslp/eslint-config-rasmuslp/issues"
@@ -10,52 +10,46 @@
 		"type": "git",
 		"url": "git+https://github.com/rasmuslp/eslint-config-rasmuslp.git"
 	},
-	"license": "ISC",
+	"license": "BSD-3-Clause",
 	"author": {
 		"name": "Rasmus Ljungmann Pedersen",
 		"email": "rasmuslp@gmail.com"
 	},
+	"type": "module",
 	"main": "src/index.js",
 	"files": [
 		"src/"
 	],
 	"scripts": {
-		"lint": "npm run lint:ts",
-		"lint:all": "npm run lint:js && npm run lint:ts",
-		"lint:js": "eslint --no-eslintrc --config .eslintrc.json .",
-		"lint:ts": "eslint --no-eslintrc --config .eslintrc.typescript.json .",
+		"format": "npm run prettier:write",
+		"lint": "eslint .",
+		"prettier:check": "prettier . --check",
+		"prettier:write": "prettier . --write",
 		"publish:beta": "np --no-publish --no-release-draft --any-branch",
 		"publish:release": "np --no-publish --no-release-draft",
-		"test": "npm run lint:all"
+		"test": "npm run format && npm run lint"
 	},
 	"dependencies": {
-		"@typescript-eslint/parser": "^7.18.0",
-		"eslint-config-airbnb-base": "^15.0.0",
-		"eslint-config-airbnb-typescript": "^18.0.0"
+		"@eslint/js": "9.35.0",
+		"eslint-config-flat-gitignore": "2.1.0",
+		"eslint-import-resolver-typescript": "4.4.4",
+		"eslint-plugin-import-x": "4.16.1",
+		"eslint-plugin-promise": "7.2.1",
+		"eslint-plugin-unicorn": "61.0.1",
+		"typescript-eslint": "8.42.0"
 	},
 	"devDependencies": {
-		"@types/node": "18.19.121",
-		"@typescript-eslint/eslint-plugin": "7.18.0",
-		"eslint": "8.57.1",
-		"eslint-plugin-deprecation": "3.0.0",
-		"eslint-plugin-import": "2.32.0",
-		"eslint-plugin-n": "17.21.3",
-		"eslint-plugin-promise": "7.2.1",
-		"eslint-plugin-unicorn": "56.0.1",
+		"eslint": "9.35.0",
 		"np": "10.2.0",
-		"typescript": "5.8.3"
+		"prettier": "3.6.2",
+		"typescript": "5.9.2"
 	},
 	"peerDependencies": {
-		"@typescript-eslint/eslint-plugin": "^7.18.0",
-		"eslint": "^8.57.1",
-		"eslint-plugin-deprecation": "^3.0.0",
-		"eslint-plugin-import": "^2.31.0",
-		"eslint-plugin-n": "^17.20.0",
-		"eslint-plugin-promise": "^7.2.1",
-		"eslint-plugin-unicorn": "^56.0.1"
+		"eslint": ">=9.35.0",
+		"typescript": ">=5.9.2"
 	},
 	"engines": {
-		"node": ">=18.18.0"
+		"node": ">=22.11.0"
 	},
 	"publishConfig": {
 		"access": "public"
