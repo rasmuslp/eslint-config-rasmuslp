@@ -10,18 +10,7 @@ import { configs as tseslintConfig } from 'typescript-eslint';
 
 export default defineConfig([
 	gitignore(),
-	{
-		extends: [eslint.configs.recommended],
-		rules: {
-			curly: ['error', 'all'],
-			'sort-imports': [
-				'error',
-				{
-					ignoreDeclarationSort: true,
-				},
-			],
-		},
-	},
+	eslint.configs.recommended,
 	{
 		extends: [tseslintConfig.strictTypeChecked, tseslintConfig.stylisticTypeChecked],
 		languageOptions: {
@@ -29,7 +18,23 @@ export default defineConfig([
 				projectService: true,
 			},
 		},
+	},
+	importX.flatConfigs.recommended,
+	importX.flatConfigs.typescript,
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+	pluginPromise.configs['flat/recommended'],
+	eslintPluginUnicorn.configs.recommended,
+	{
 		rules: {
+			// eslint
+			curly: ['error', 'all'],
+			'sort-imports': [
+				'error',
+				{
+					ignoreDeclarationSort: true,
+				},
+			],
+
 			'@typescript-eslint/consistent-type-exports': 'error',
 			'@typescript-eslint/consistent-type-imports': 'error',
 			'@typescript-eslint/method-signature-style': ['error', 'property'],
@@ -43,11 +48,7 @@ export default defineConfig([
 			],
 			'@typescript-eslint/return-await': ['error', 'in-try-catch'],
 			'@typescript-eslint/switch-exhaustiveness-check': 'error',
-		},
-	},
-	{
-		extends: [importX.flatConfigs.recommended, importX.flatConfigs.typescript],
-		rules: {
+
 			'import-x/consistent-type-specifier-style': ['error', 'prefer-top-level'],
 			'import-x/order': [
 				'error',
@@ -67,13 +68,7 @@ export default defineConfig([
 					],
 				},
 			],
-		},
-	},
-	// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-	pluginPromise.configs['flat/recommended'],
-	{
-		extends: [eslintPluginUnicorn.configs.recommended],
-		rules: {
+
 			'unicorn/filename-case': 'off',
 			'unicorn/no-null': 'off',
 			'unicorn/prevent-abbreviations': [
