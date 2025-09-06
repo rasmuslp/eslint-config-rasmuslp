@@ -4,6 +4,8 @@ import eslint from '@eslint/js';
 import { defineConfig } from 'eslint/config';
 import gitignore from 'eslint-config-flat-gitignore';
 import { importX } from 'eslint-plugin-import-x';
+import pluginPromise from 'eslint-plugin-promise';
+import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import { configs as tseslintConfig } from 'typescript-eslint';
 
 export default defineConfig([
@@ -21,10 +23,7 @@ export default defineConfig([
 		},
 	},
 	{
-		extends: [
-			tseslintConfig.strictTypeChecked,
-			tseslintConfig.stylisticTypeChecked,
-		],
+		extends: [tseslintConfig.strictTypeChecked, tseslintConfig.stylisticTypeChecked],
 		languageOptions: {
 			parserOptions: {
 				projectService: true,
@@ -66,6 +65,29 @@ export default defineConfig([
 							position: 'after',
 						},
 					],
+				},
+			],
+		},
+	},
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+	pluginPromise.configs['flat/recommended'],
+	{
+		extends: [eslintPluginUnicorn.configs.recommended],
+		rules: {
+			'unicorn/filename-case': 'off',
+			'unicorn/no-null': 'off',
+			'unicorn/prevent-abbreviations': [
+				'error',
+				{
+					replacements: {
+						args: false,
+						fn: false,
+						func: {
+							fn: true,
+						},
+						i: false,
+						j: false,
+					},
 				},
 			],
 		},
