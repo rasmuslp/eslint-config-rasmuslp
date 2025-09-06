@@ -3,9 +3,10 @@
 import eslint from '@eslint/js';
 import { defineConfig } from 'eslint/config';
 import gitignore from 'eslint-config-flat-gitignore';
-import tseslint from 'typescript-eslint';
+import { importX } from 'eslint-plugin-import-x';
+import { configs as tseslintConfig } from 'typescript-eslint';
 
-export default defineConfig(
+export default defineConfig([
 	gitignore(),
 	{
 		extends: [eslint.configs.recommended],
@@ -21,8 +22,8 @@ export default defineConfig(
 	},
 	{
 		extends: [
-			tseslint.configs.strictTypeChecked,
-			tseslint.configs.stylisticTypeChecked,
+			tseslintConfig.strictTypeChecked,
+			tseslintConfig.stylisticTypeChecked,
 		],
 		languageOptions: {
 			parserOptions: {
@@ -45,4 +46,28 @@ export default defineConfig(
 			'@typescript-eslint/switch-exhaustiveness-check': 'error',
 		},
 	},
-);
+	{
+		extends: [importX.flatConfigs.recommended, importX.flatConfigs.typescript],
+		rules: {
+			'import-x/consistent-type-specifier-style': ['error', 'prefer-top-level'],
+			'import-x/order': [
+				'error',
+				{
+					alphabetize: {
+						order: 'asc',
+						orderImportKind: 'desc',
+						caseInsensitive: true,
+					},
+					'newlines-between': 'always',
+					pathGroups: [
+						{
+							pattern: '@/**',
+							group: 'external',
+							position: 'after',
+						},
+					],
+				},
+			],
+		},
+	},
+]);
