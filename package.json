@@ -26,12 +26,18 @@
 		"publish:release": "np --no-publish --no-release-draft",
 		"test": "npm run lint"
 	},
+	"dependencies": {
+		"@eslint/js": "9.35.0",
+		"typescript-eslint": "8.42.0"
+	},
 	"devDependencies": {
 		"eslint": "9.35.0",
-		"np": "10.2.0"
+		"np": "10.2.0",
+		"typescript": "5.9.2"
 	},
 	"peerDependencies": {
-		"eslint": ">=9.35.0"
+		"eslint": ">=9.35.0",
+		"typescript": ">5.9.2"
 	},
 	"engines": {
 		"node": ">=18.18.0"
