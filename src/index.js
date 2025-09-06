@@ -7,14 +7,14 @@ import tseslint from 'typescript-eslint';
 
 export default defineConfig(
 	gitignore(),
-  eslint.configs.recommended,
-  tseslint.configs.strictTypeChecked,
-  tseslint.configs.stylisticTypeChecked,
+	eslint.configs.recommended,
+	tseslint.configs.strictTypeChecked,
+	tseslint.configs.stylisticTypeChecked,
 	{
-    languageOptions: {
-      parserOptions: {
-        projectService: true,
-      },
-    },
-  },
+		languageOptions: {
+			parserOptions: {
+				projectService: true,
+			},
+		},
+	},
 );

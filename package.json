@@ -21,6 +21,7 @@
 		"src/"
 	],
 	"scripts": {
+		"format": "prettier -w .",
 		"lint": "eslint .",
 		"publish:beta": "np --no-publish --no-release-draft --any-branch",
 		"publish:release": "np --no-publish --no-release-draft",
@@ -34,6 +35,7 @@
 	"devDependencies": {
 		"eslint": "9.35.0",
 		"np": "10.2.0",
+		"prettier": "3.6.2",
 		"typescript": "5.9.2"
 	},
 	"peerDependencies": {
