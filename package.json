@@ -21,11 +21,13 @@
 		"src/"
 	],
 	"scripts": {
-		"format": "prettier -w .",
+		"format": "npm run prettier:write",
 		"lint": "eslint .",
+		"prettier:check": "prettier . --check",
+		"prettier:write": "prettier . --write",
 		"publish:beta": "np --no-publish --no-release-draft --any-branch",
 		"publish:release": "np --no-publish --no-release-draft",
-		"test": "npm run lint"
+		"test": "npm run format && npm run lint"
 	},
 	"dependencies": {
 		"@eslint/js": "9.35.0",
