@@ -1,3 +1,3 @@
-const theDefault = require('./typescript');
+import { defineConfig } from "eslint/config";
 
-module.exports = theDefault;
+export default defineConfig([]);

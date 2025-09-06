@@ -21,19 +21,18 @@
 		"src/"
 	],
 	"scripts": {
-		"lint": "npm run lint:ts",
-		"lint:all": "npm run lint:js && npm run lint:ts",
-		"lint:js": "eslint --no-eslintrc --config .eslintrc.json .",
-		"lint:ts": "eslint --no-eslintrc --config .eslintrc.typescript.json .",
+		"lint": "eslint .",
 		"publish:beta": "np --no-publish --no-release-draft --any-branch",
 		"publish:release": "np --no-publish --no-release-draft",
-		"test": "npm run lint:all"
+		"test": "npm run lint"
 	},
-	"dependencies": {},
 	"devDependencies": {
+		"eslint": "9.35.0",
 		"np": "10.2.0"
 	},
-	"peerDependencies": {},
+	"peerDependencies": {
+		"eslint": ">=9.35.0"
+	},
 	"engines": {
 		"node": ">=18.18.0"
 	},
