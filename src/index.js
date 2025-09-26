@@ -8,7 +8,7 @@ import pluginPromise from 'eslint-plugin-promise';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import { configs as tseslintConfig } from 'typescript-eslint';
 
-export async function eslintConfigRasmuslp({ withJest = false } = {}) {
+export async function eslintConfigRasmuslp({ withJest = false, withNode = false } = {}) {
 	const config = [
 		gitignore(),
 		eslint.configs.recommended,
@@ -89,6 +89,16 @@ export async function eslintConfigRasmuslp({ withJest = false } = {}) {
 			},
 		},
 	];
+
+	if (withNode) {
+		const nodePluginModule = await import('eslint-plugin-n');
+		const nodePlugin = nodePluginModule.default;
+		config.push(nodePlugin.configs['flat/recommended'], {
+			rules: {
+				'n/no-missing-import': 'off',
+			},
+		});
+	}
 
 	if (withJest) {
 		const jestPluginModule = await import('eslint-plugin-jest');
