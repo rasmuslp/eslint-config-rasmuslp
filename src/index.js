@@ -91,8 +91,9 @@ export async function eslintConfigRasmuslp({ withJest = false } = {}) {
 	];
 
 	if (withJest) {
-		const jest = await import('eslint-plugin-jest');
-		config.push(jest.configs['flat/recommended'], jest.configs['flat/style']);
+		const jestPluginModule = await import('eslint-plugin-jest');
+		const jestPlugin = jestPluginModule.default;
+		config.push(jestPlugin.configs['flat/recommended'], jestPlugin.configs['flat/style']);
 	}
 
 	return defineConfig(config);
