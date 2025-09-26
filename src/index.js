@@ -3,6 +3,7 @@
 import eslint from '@eslint/js';
 import { defineConfig } from 'eslint/config';
 import gitignore from 'eslint-config-flat-gitignore';
+import prettierConfig from 'eslint-config-prettier/flat';
 import { importX } from 'eslint-plugin-import-x';
 import pluginPromise from 'eslint-plugin-promise';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
@@ -105,6 +106,8 @@ export async function eslintConfigRasmuslp({ withJest = false, withNode = false 
 		const jestPlugin = jestPluginModule.default;
 		config.push(jestPlugin.configs['flat/recommended'], jestPlugin.configs['flat/style']);
 	}
+
+	config.push(prettierConfig);
 
 	return defineConfig(config);
 }
