@@ -28,6 +28,7 @@ export async function eslintConfigRasmuslp({ withJest = false, withNode = false 
 		eslintPluginUnicorn.configs.recommended,
 		{
 			rules: {
+				'no-promise-executor-return': ['error', { allowVoid: true }],
 				'sort-imports': [
 					'error',
 					{
