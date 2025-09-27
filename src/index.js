@@ -70,6 +70,7 @@ export async function eslintConfigRasmuslp({ withJest = false, withNode = false 
 				],
 
 				'unicorn/filename-case': 'off',
+				'unicorn/no-array-sort': 'off', // For browser compatibility, this is turned off
 				'unicorn/no-null': 'off',
 				'unicorn/prevent-abbreviations': [
 					'error',
@@ -82,6 +83,13 @@ export async function eslintConfigRasmuslp({ withJest = false, withNode = false 
 							},
 							i: false,
 							j: false,
+							utils: false,
+						},
+						allowList: {
+							ctx: true,
+							db: true,
+							env: true,
+							props: true,
 						},
 					},
 				],
