@@ -28,8 +28,6 @@ export async function eslintConfigRasmuslp({ withJest = false, withNode = false 
 		eslintPluginUnicorn.configs.recommended,
 		{
 			rules: {
-				// eslint
-				curly: ['error', 'all'],
 				'sort-imports': [
 					'error',
 					{
@@ -107,7 +105,12 @@ export async function eslintConfigRasmuslp({ withJest = false, withNode = false 
 		config.push(jestPlugin.configs['flat/recommended'], jestPlugin.configs['flat/style']);
 	}
 
-	config.push(prettierConfig);
+	// Prettier last, with rules that override prettier
+	config.push(prettierConfig, {
+		rules: {
+			curly: ['error', 'all'],
+		},
+	});
 
 	return defineConfig(config);
 }
