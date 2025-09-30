@@ -21,6 +21,7 @@
 		"src/"
 	],
 	"scripts": {
+		"config-inspector": "npx @eslint/config-inspector@latest",
 		"format": "npm run prettier:write",
 		"lint": "eslint .",
 		"prettier:check": "prettier . --check",
