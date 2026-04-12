@@ -31,26 +31,26 @@
 		"test": "npm run format && npm run lint"
 	},
 	"dependencies": {
-		"@eslint/js": "^9.39.4",
+		"@eslint/js": "^10.0.1",
 		"eslint-config-flat-gitignore": "^2.3.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-import-resolver-typescript": "^4.4.4",
 		"eslint-plugin-import-x": "^4.16.2",
 		"eslint-plugin-promise": "^7.2.1",
 		"eslint-plugin-unicorn": "^64.0.0",
-		"typescript-eslint": "^8.57.2"
+		"typescript-eslint": "^8.58.1"
 	},
 	"devDependencies": {
-		"eslint": "9.39.4",
-		"eslint-plugin-jest": "29.15.1",
+		"eslint": "10.2.0",
+		"eslint-plugin-jest": "29.15.2",
 		"eslint-plugin-n": "17.24.0",
-		"np": "11.0.2",
-		"prettier": "3.8.1",
+		"np": "11.0.3",
+		"prettier": "3.8.2",
 		"typescript": "5.9.3"
 	},
 	"peerDependencies": {
-		"eslint": ">=9.39.4",
-		"eslint-plugin-jest": ">=29.15.1",
+		"eslint": ">=10.2.0",
+		"eslint-plugin-jest": ">=29.15.2",
 		"eslint-plugin-n": ">=17.24.0",
 		"typescript": ">=5.9.3"
 	},
@@ -62,8 +62,13 @@
 			"optional": true
 		}
 	},
+	"overrides": {
+		"eslint-plugin-promise@^7.2.1": {
+			"eslint": ">7"
+		}
+	},
 	"engines": {
-		"node": ">=22.11.0"
+		"node": ">=22.13.0"
 	},
 	"publishConfig": {
 		"access": "public"
