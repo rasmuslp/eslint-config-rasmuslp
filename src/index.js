@@ -5,7 +5,7 @@ import { defineConfig } from 'eslint/config';
 import gitignore from 'eslint-config-flat-gitignore';
 import prettierConfig from 'eslint-config-prettier/flat';
 import { importX } from 'eslint-plugin-import-x';
-import pluginPromise from 'eslint-plugin-promise';
+// import pluginPromise from 'eslint-plugin-promise';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import { configs as tseslintConfig } from 'typescript-eslint';
 
@@ -23,8 +23,7 @@ export async function eslintConfigRasmuslp({ withJest = false, withNode = false 
 		},
 		importX.flatConfigs.recommended,
 		importX.flatConfigs.typescript,
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-		pluginPromise.configs['flat/recommended'],
+		// pluginPromise.configs['flat/recommended'],
 		eslintPluginUnicorn.configs.recommended,
 		{
 			rules: {

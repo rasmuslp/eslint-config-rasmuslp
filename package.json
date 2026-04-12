@@ -36,7 +36,6 @@
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-import-resolver-typescript": "^4.4.4",
 		"eslint-plugin-import-x": "^4.16.2",
-		"eslint-plugin-promise": "^7.2.1",
 		"eslint-plugin-unicorn": "^64.0.0",
 		"typescript-eslint": "^8.58.1"
 	},
@@ -60,11 +59,6 @@
 		},
 		"eslint-plugin-n": {
 			"optional": true
-		}
-	},
-	"overrides": {
-		"eslint-plugin-promise@^7.2.1": {
-			"eslint": ">7"
 		}
 	},
 	"engines": {
