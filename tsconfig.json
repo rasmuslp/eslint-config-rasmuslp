@@ -29,5 +29,5 @@
 		"skipLibCheck": true,
 		"allowJs": true
 	},
-	"include": ["**/*.js"]
+	"include": ["**/*.js", "**/*.ts"]
 }

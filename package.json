@@ -24,6 +24,7 @@
 		"config-inspector": "npx @eslint/config-inspector@latest",
 		"format": "npm run prettier:write",
 		"lint": "eslint .",
+		"prepare": "husky",
 		"prettier:check": "prettier . --check",
 		"prettier:write": "prettier . --write",
 		"publish:beta": "np --no-publish --no-release-draft --any-branch",
@@ -40,9 +41,12 @@
 		"typescript-eslint": "^8.58.1"
 	},
 	"devDependencies": {
+		"@commitlint/cli": "21.0.2",
+		"@commitlint/config-conventional": "21.0.2",
 		"eslint": "10.2.0",
 		"eslint-plugin-jest": "29.15.2",
 		"eslint-plugin-n": "17.24.0",
+		"husky": "9.1.7",
 		"np": "11.0.3",
 		"prettier": "3.8.2",
 		"typescript": "5.9.3"

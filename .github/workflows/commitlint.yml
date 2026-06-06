@@ -1,0 +1,71 @@
+name: Commitlint
+
+on:
+  push:
+    branches:
+      - '**'
+
+env:
+  HUSKY: '0'
+  NODE: '24'
+
+permissions:
+  contents: read
+
+jobs:
+  commitlint:
+    name: Lint commit messages
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE }}
+
+      - name: Node and NPM versions
+        run: |
+          node --version
+          npm --version
+
+      - name: Cache node_modules
+        uses: actions/cache@v5
+        id: cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.NODE }}-${{ hashFiles('package-lock.json')}}
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - name: Determine commit range
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          PUSH_BASE_SHA: ${{ github.event.before }}
+          PUSH_HEAD_SHA: ${{ github.sha }}
+        run: |
+          # For normal pushes, `before` is the previous tip of the branch.
+          # Only use it if the commit is actually present in the local checkout.
+          if [[ "$PUSH_BASE_SHA" != "0000000000000000000000000000000000000000" ]] \
+            && git cat-file -e "$PUSH_BASE_SHA^{commit}" 2>/dev/null; then
+            echo "BASE_SHA=$PUSH_BASE_SHA" >> "$GITHUB_ENV"
+            echo "HEAD_SHA=$PUSH_HEAD_SHA" >> "$GITHUB_ENV"
+            exit 0
+          fi
+
+          # First pushes and force-pushes can leave `before` unusable, so fall
+          # back to the branch point with the repository default branch.
+          # Fetch the full default-branch history here so merge-base can walk
+          # back far enough even when the branch diverged long ago.
+          git fetch origin "$DEFAULT_BRANCH" --no-tags
+          merge_base="$(git merge-base HEAD "origin/$DEFAULT_BRANCH")"
+
+          echo "BASE_SHA=$merge_base" >> "$GITHUB_ENV"
+          echo "HEAD_SHA=$PUSH_HEAD_SHA" >> "$GITHUB_ENV"
+
+      - name: Validate commits with commitlint
+        run: npx commitlint --from "$BASE_SHA" --to "$HEAD_SHA" --verbose
