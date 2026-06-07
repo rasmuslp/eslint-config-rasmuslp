@@ -7,8 +7,8 @@
 	// input (which would fail with TS5055), keeping `build:types` idempotent.
 	"exclude": ["**/*.d.ts"],
 	"compilerOptions": {
-		// The base sets noEmit for checking-only; re-enable emit here, declarations only.
 		"noEmit": false,
+		"declaration": true,
 		"emitDeclarationOnly": true
 	}
 }

@@ -13,8 +13,6 @@
 
 		// Other Outputs
 		"noEmit": true,
-		"declaration": true,
-		"declarationMap": false,
 
 		// Stricter Typechecking Options
 		"noUncheckedIndexedAccess": true,
