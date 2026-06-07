@@ -115,9 +115,8 @@ export async function eslintConfigRasmuslp({ withJest = false, withNode = false 
 	}
 
 	config.push(
-		// Root config files (e.g. .ncurc.js, eslint.config.js) aren't part of the TS project.
-		// Pushed after every typed config above (incl. the optional plugins) so it
-		// switches type-checked linting off for these files.
+		// Disable typed linting for all root-level JS files; see README for the rationale.
+		// Pushed after every typed config above (incl. the optional plugins) so it wins.
 		{
 			files: ['*.{js,mjs,cjs}'],
 			extends: [tseslintConfig.disableTypeChecked],
