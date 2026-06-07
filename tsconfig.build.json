@@ -3,6 +3,9 @@
 	// root-level config files (e.g. commitlint.config.ts); see docs/adr/0001.
 	"extends": "./tsconfig.json",
 	"include": ["src"],
+	// Exclude generated declarations so a stale src/*.d.ts isn't picked up as an
+	// input (which would fail with TS5055), keeping `build:types` idempotent.
+	"exclude": ["**/*.d.ts"],
 	"compilerOptions": {
 		// The base sets noEmit for checking-only; re-enable emit here, declarations only.
 		"noEmit": false,
