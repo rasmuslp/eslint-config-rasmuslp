@@ -62,3 +62,6 @@ typings/
 
 # Development environment
 .idea/
+
+# Generated type declarations (built on publish via build:types)
+/src/*.d.ts
