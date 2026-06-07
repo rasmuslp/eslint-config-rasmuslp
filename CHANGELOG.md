@@ -1,5 +1,17 @@
 # Changelog
 
+## [10.1.0](https://github.com/rasmuslp/eslint-config-rasmuslp/compare/v10.0.0...v10.1.0) (2026-06-07)
+
+
+### ✨ Features
+
+* Generate and export types ([#216](https://github.com/rasmuslp/eslint-config-rasmuslp/issues/216)) ([9adaf25](https://github.com/rasmuslp/eslint-config-rasmuslp/commit/9adaf255da6147aa805ffce1bbb589dec4fe2d6f))
+
+
+### 🧹 Chores & Maintenance
+
+* **vscode:** Configure to use workspace typescript version ([317ea11](https://github.com/rasmuslp/eslint-config-rasmuslp/commit/317ea11a416d7323723c8c3c00da1b3803dcf008))
+
 ## [10.0.0](https://github.com/rasmuslp/eslint-config-rasmuslp/compare/v9.1.0...v10.0.0) (2026-06-07)
 
 
