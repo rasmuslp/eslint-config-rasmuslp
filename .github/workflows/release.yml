@@ -37,14 +37,7 @@ jobs:
         run: |
           node --version
           npm --version
-      - name: Cache node_modules
-        uses: actions/cache@v5
-        id: cache
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-${{ env.NODE }}-${{ hashFiles('package-lock.json') }}
       - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
       - name: Publish to NPM
         if: github.event.release.prerelease == false
