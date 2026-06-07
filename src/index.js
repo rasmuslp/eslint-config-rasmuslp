@@ -114,12 +114,22 @@ export async function eslintConfigRasmuslp({ withJest = false, withNode = false 
 		config.push(jestPlugin.configs['flat/recommended'], jestPlugin.configs['flat/style']);
 	}
 
-	// Prettier last, with rules that override prettier
-	config.push(prettierConfig, {
-		rules: {
-			curly: ['error', 'all'],
+	config.push(
+		// Disable typed linting for all root-level JS files; see README for the rationale.
+		// Pushed after every typed config above (incl. the optional plugins) so it wins.
+		{
+			files: ['*.{js,mjs,cjs}'],
+			extends: [tseslintConfig.disableTypeChecked],
 		},
-	});
+
+		// Prettier last, with rules that override prettier
+		prettierConfig,
+		{
+			rules: {
+				curly: ['error', 'all'],
+			},
+		},
+	);
 
 	return defineConfig(config);
 }

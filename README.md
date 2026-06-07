@@ -27,6 +27,14 @@ Lastly, specify the minimum supported Node version in `package.json` to enable c
 
 ```json
 	"engines": {
-		"node": ">=22.11.0"
+		"node": ">=22.13.0"
 	}
 ```
+
+## Behaviour
+
+### Root-level JS files
+
+Typed linting is disabled for **all** root-level JS files (`*.js`, `*.mjs`, `*.cjs`). This is intentional: the assumption is that your actual source lives in a subfolder (e.g. `src/`), so the files left at the root are config files such as `eslint.config.js` or `.ncurc.js`. These typically live outside the TypeScript project, so applying type-aware rules to them would otherwise error.
+
+Files in subdirectories are unaffected and keep typed linting. If you keep source files at the repository root, they will _not_ get typed linting — move them into a subfolder to opt back in.
