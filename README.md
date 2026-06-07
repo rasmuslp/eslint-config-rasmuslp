@@ -27,7 +27,7 @@ Lastly, specify the minimum supported Node version in `package.json` to enable c
 
 ```json
 	"engines": {
-		"node": ">=22.11.0"
+		"node": ">=22.13.0"
 	}
 ```
 
