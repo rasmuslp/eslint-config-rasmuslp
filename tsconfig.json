@@ -13,7 +13,6 @@
 
 		// Other Outputs
 		"noEmit": true,
-		"sourceMap": true,
 		"declaration": true,
 		"declarationMap": false,
 
