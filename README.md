@@ -13,7 +13,7 @@ npm install --save-dev @rasmuslp/eslint-config
 
 ## Usage
 
-Configure eslint in your project by using this configuration in your local `eslint.config.js`
+Configure eslint in your project by using this configuration in your local `eslint.config.js` (or `eslint.config.ts` — the package ships TypeScript declarations).
 
 ```javascript
 // eslint.config.js
@@ -22,8 +22,6 @@ import rasmuslpConfig from '@rasmuslp/eslint-config';
 
 export default defineConfig([rasmuslpConfig]);
 ```
-
-The package ships TypeScript declarations, so the named export and its options are fully typed.
 
 ### Options
 
