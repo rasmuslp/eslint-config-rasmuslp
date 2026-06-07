@@ -1,7 +1,7 @@
 # @rasmuslp/eslint-config
 
 [![NPM package](https://img.shields.io/npm/v/@rasmuslp/eslint-config.svg)](https://www.npmjs.com/package/@rasmuslp/eslint-config)
-[![Github: CI CD](https://github.com/rasmuslp/eslint-config-rasmuslp/workflows/CI%20CD/badge.svg)](https://github.com/rasmuslp/eslint-config-rasmuslp/actions)
+[![GitHub: CI](https://github.com/rasmuslp/eslint-config-rasmuslp/workflows/CI/badge.svg)](https://github.com/rasmuslp/eslint-config-rasmuslp/actions)
 
 ## Installation
 

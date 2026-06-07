@@ -1,0 +1,43 @@
+name: Release
+
+on:
+  release:
+    types:
+      - published
+
+env:
+  HUSKY: '0'
+  NODE: '24'
+
+jobs:
+  test:
+    name: Test
+    uses: ./.github/workflows/CI.yml
+    permissions:
+      contents: read
+
+  publish:
+    name: Publish to NPM
+    needs:
+      - test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: refs/tags/${{ github.event.release.tag_name }}
+      - uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE }}
+          registry-url: 'https://registry.npmjs.org'
+      - name: Node and NPM versions
+        run: |
+          node --version
+          npm --version
+      - name: Install dependencies
+        run: npm ci
+      - name: Publish to NPM
+        run: npm publish

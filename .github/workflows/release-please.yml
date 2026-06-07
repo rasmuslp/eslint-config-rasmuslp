@@ -1,0 +1,29 @@
+name: Release Please
+
+on:
+  push:
+    branches:
+      - master
+
+permissions: {}
+
+concurrency:
+  group: release-please-master
+  cancel-in-progress: false
+
+jobs:
+  release-please:
+    name: Release Please
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: googleapis/release-please-action@v4
+        with:
+          # This must be a PAT or GitHub App token stored as RELEASE_PLEASE_TOKEN.
+          # The default GITHUB_TOKEN cannot be used here because releases created
+          # with it will not trigger the downstream workflows.
+          # For a fine-grained PAT, grant this repository:
+          # - Contents: Read and write
+          # - Issues: Read and write
+          # - Pull requests: Read and write
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
