@@ -5,6 +5,7 @@ import { defineConfig } from 'eslint/config';
 import gitignore from 'eslint-config-flat-gitignore';
 import prettierConfig from 'eslint-config-prettier/flat';
 import { importX } from 'eslint-plugin-import-x';
+// @ts-expect-error - eslint-plugin-promise ships no types
 import pluginPromise from 'eslint-plugin-promise';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import { configs as tseslintConfig } from 'typescript-eslint';

@@ -1,0 +1,11 @@
+{
+	// The base tsconfig keeps a wide `include` so eslint can type-check
+	// root-level config files (e.g. commitlint.config.ts); see docs/adr/0001.
+	"extends": "./tsconfig.json",
+	"include": ["src"],
+	"compilerOptions": {
+		// The base sets noEmit for checking-only; re-enable emit here, declarations only.
+		"noEmit": false,
+		"emitDeclarationOnly": true
+	}
+}

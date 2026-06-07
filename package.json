@@ -16,18 +16,25 @@
 		"email": "rasmuslp@gmail.com"
 	},
 	"type": "module",
-	"main": "src/index.js",
+	"exports": {
+		".": {
+			"types": "./src/index.d.ts",
+			"import": "./src/index.js"
+		}
+	},
 	"files": [
 		"src/"
 	],
 	"scripts": {
+		"build:types": "tsc -p tsconfig.build.json",
 		"config-inspector": "npx @eslint/config-inspector@latest",
 		"format": "npm run prettier:write",
+		"full-suite": "npm run format && npm run lint && npm run build:types",
 		"lint": "eslint .",
 		"prepare": "husky",
+		"prepublishOnly": "npm run build:types",
 		"prettier:check": "prettier . --check",
-		"prettier:write": "prettier . --write",
-		"test": "npm run format && npm run lint"
+		"prettier:write": "prettier . --write"
 	},
 	"dependencies": {
 		"@eslint/js": "^9.39.4",
