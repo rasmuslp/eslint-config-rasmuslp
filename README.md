@@ -30,3 +30,9 @@ Lastly, specify the minimum supported Node version in `package.json` to enable c
 		"node": ">=22.11.0"
 	}
 ```
+
+## Behavior
+
+### Root-level config files
+
+Type-checked linting is disabled for root-level config files (`*.js`, `*.mjs`, `*.cjs`), e.g. `eslint.config.js` or `.ncurc.js`. These files typically live outside the TypeScript project, so applying type-aware rules to them would otherwise error. Files in subdirectories are unaffected and remain type-checked.
