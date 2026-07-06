@@ -1,5 +1,14 @@
 # Changelog
 
+## [10.1.1](https://github.com/rasmuslp/eslint-config-rasmuslp/compare/v10.1.0...v10.1.1) (2026-07-06)
+
+
+### 🧹 Chores & Maintenance
+
+* **deps:** Bump actions/cache from 5 to 6 ([d68d262](https://github.com/rasmuslp/eslint-config-rasmuslp/commit/d68d2627e6886c418f9768dc5cb8687fed8005b9))
+* **deps:** Bump actions/checkout from 6 to 7 ([0a4c5ed](https://github.com/rasmuslp/eslint-config-rasmuslp/commit/0a4c5ed6f67a9160eedaca43304953027ef2f9a7))
+* **deps:** Upgrade dependencies ([#218](https://github.com/rasmuslp/eslint-config-rasmuslp/issues/218)) ([b991173](https://github.com/rasmuslp/eslint-config-rasmuslp/commit/b99117337618a2e82f93c94bbbb6a6cfc1dd0ac3))
+
 ## [10.1.0](https://github.com/rasmuslp/eslint-config-rasmuslp/compare/v10.0.0...v10.1.0) (2026-06-07)
 
 
