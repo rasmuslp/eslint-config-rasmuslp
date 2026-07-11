@@ -1,5 +1,17 @@
 # Changelog
 
+## [10.1.2](https://github.com/rasmuslp/eslint-config-rasmuslp/compare/v10.1.1...v10.1.2) (2026-07-11)
+
+
+### ⚙️ CI/CD
+
+* **Dependabot:** Disable automatic npm updates ([f2061c0](https://github.com/rasmuslp/eslint-config-rasmuslp/commit/f2061c014ed8ebdf33628c28446326210e03b683))
+
+
+### 🧹 Chores & Maintenance
+
+* **deps:** Bump googleapis/release-please-action from 4 to 5 ([#221](https://github.com/rasmuslp/eslint-config-rasmuslp/issues/221)) ([500806e](https://github.com/rasmuslp/eslint-config-rasmuslp/commit/500806ef96fc1ef39f7e8b6cf52557317c22fa5d))
+
 ## [10.1.1](https://github.com/rasmuslp/eslint-config-rasmuslp/compare/v10.1.0...v10.1.1) (2026-07-06)
 
 
