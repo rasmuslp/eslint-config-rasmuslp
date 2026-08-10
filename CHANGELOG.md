@@ -1,5 +1,13 @@
 # Changelog
 
+## [10.1.3](https://github.com/rasmuslp/eslint-config-rasmuslp/compare/v10.1.2...v10.1.3) (2026-08-10)
+
+
+### 🧹 Chores & Maintenance
+
+* **deps:** Bump actions/setup-node from 6 to 7 ([#224](https://github.com/rasmuslp/eslint-config-rasmuslp/issues/224)) ([dfea7da](https://github.com/rasmuslp/eslint-config-rasmuslp/commit/dfea7dad2009cdd5696ada468fbbed64ee3f7a75))
+* **deps:** Upgrade dependencies ([#229](https://github.com/rasmuslp/eslint-config-rasmuslp/issues/229)) ([672454d](https://github.com/rasmuslp/eslint-config-rasmuslp/commit/672454d0c4c6df485c3594fef53e8cccedcbb1f4))
+
 ## [10.1.2](https://github.com/rasmuslp/eslint-config-rasmuslp/compare/v10.1.1...v10.1.2) (2026-07-29)
 
 
