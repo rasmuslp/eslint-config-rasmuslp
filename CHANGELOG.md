@@ -1,5 +1,12 @@
 # Changelog
 
+## [10.1.4](https://github.com/rasmuslp/eslint-config-rasmuslp/compare/v10.1.3...v10.1.4) (2026-09-03)
+
+
+### 🧹 Chores & Maintenance
+
+* **deps:** Upgrade dependencies ([690d4a1](https://github.com/rasmuslp/eslint-config-rasmuslp/commit/690d4a12ae25b493623de0de2d9b3bb9583193f6))
+
 ## [10.1.3](https://github.com/rasmuslp/eslint-config-rasmuslp/compare/v10.1.2...v10.1.3) (2026-08-10)
 
 
